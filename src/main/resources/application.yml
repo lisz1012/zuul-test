@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: zuul-test
+server:
+  port: 80
+eureka:
+  client:
+    service-url:
+      defaultZone: http://lisz:666@localhost:7900/eureka/
+
