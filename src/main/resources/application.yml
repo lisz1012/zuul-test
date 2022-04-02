@@ -7,4 +7,21 @@ eureka:
   client:
     service-url:
       defaultZone: http://lisz:666@localhost:7900/eureka/
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+      enabled: true
+    routes:
+      enabled: true
+#zuul:
+zuul:
+  routes:
+    xx:
+      path: /xx/**   # 遇到/xx这个uri就转到下面的url
+      url: http://mashibing.com/vip.html
+#  ignored-services: user-provider
